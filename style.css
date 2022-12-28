@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;600&display=swap');
+/*
+#D91A3F: vermelho 
+#0D0D0D: azul 0
+#024873: azul 1
+#049DD9: azul 2
+#04B2D9: azul 3
+#D9CF1A: amarelo
+escuro 0 : 3 claro
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #190e22; */
+    background-image: linear-gradient(90deg, #1f122b, #0e0812);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container-title {
+    display: flex;
+    /* height: 90px; */
+    padding: 30px;
+    /* background-color: #D91A3F; */
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+}
+
+h1 {
+    font-size: 30px;
+    /* color: #024873; */
+    letter-spacing: 5px;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 5px;
+    background-image: linear-gradient(to right, #04B2D9,#D9CF1A, #d99d1a);
+  
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+    background-clip: text;
+    -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+    /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+    -webkit-text-fill-color: transparent;
+
+    /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+    color: black;
+}
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blueviolet; */
+    flex-direction: column;
+    height: 100%;
+    gap: 70px;
+}
+
+.temporizador {
+    display: flex;
+    gap: 100px;
+    padding: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 20vh; */
+}
+
+.tempo{
+    font-size: 100px;
+    /* color: #04B2D9; */
+    color: white;
+    /* letter-spacing: 5px; */
+    font-family: 'Barlow', sans-serif;
+    /* border: 1px solid #024873; */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.buttons {
+    display: flex;
+    gap: 40px;
+}
+
+.button {
+    border: none;
+    width: 75px;
+    height: 75px;
+    font-family: 'Barlow', sans-serif;
+    outline: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+#btn-reiniciar {
+    background-color: #D9CF1A;
+}
+
+.desabilitado {
+    background-color: #049DD9;
+    /* box-shadow: 0 0 30px rgba(4, 178, 217, 0.4); */
+}
+.habilitado {
+    background-color: #D91A3F;
+    /* box-shadow: 0 0 30px rgba(242, 29, 68, 0.4); */
+}
+
