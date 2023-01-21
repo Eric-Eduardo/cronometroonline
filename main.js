@@ -21,6 +21,8 @@ var cronometroPausado = 1; //0: o cronômetro está no estado "habilitado", 1: o
 
 // console.log(getTempo());
 // localStorage.setItem("tempo@cronometroonline", Date.now());
+botaoAcionar.addEventListener("click", acionar);
+botaoReiniciar.addEventListener("click", reiniciarContagem);
 
 function contagem() {
     contMinutos = Math.floor((Date.now() - dataInicial)/60000);
