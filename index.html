@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cronometro Online</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img-clock.png">
 </head>
-<body id="body">
+<body>
     <div class="container-title">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alarm" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#04B2D9" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -15,7 +16,7 @@
             <polyline points="12 10 12 13 14 13" />
             <line x1="7" y1="4" x2="4.25" y2="6" />
             <line x1="17" y1="4" x2="19.75" y2="6" />
-          </svg>
+        </svg>
         <h1>cronometroonline</h1>
     </div>
     <div class="display">
@@ -36,13 +37,13 @@
         </div>
         <div class="buttons">
             <div id="btn-acionar" class="desabilitado button">
-                <svg xmlns="http://www.w3.org/2000/svg" id = "icone" class="icon icon-tabler icon-tabler-player-play" width="50" height="50" viewBox="0 0 24 24" stroke-width="0.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
+                <svg id="svg-acionar" xmlns="http://www.w3.org/2000/svg" id = "icone" class="icon icon-tabler icon-tabler-player-play" width="50" height="50" viewBox="0 0 24 24" stroke-width="0.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M7 4v16l13 -8z" />
                 </svg>
             </div>
             <div id="btn-reiniciar" class="button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rotate" width="50" height="50" viewBox="0 0 24 24" stroke-width="3" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg id="svg-reiniciar" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rotate" width="50" height="50" viewBox="0 0 24 24" stroke-width="3" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M19.95 11a8 8 0 1 0 -.5 4m.5 5v-5h-5" />
                 </svg>

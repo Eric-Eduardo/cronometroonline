@@ -9,15 +9,16 @@
 escuro 0 : 3 claro
 */
 * {
-    margin: 0;
+    margin:0; 
     padding: 0;
+    box-sizing: border-box;
+    border: none;
 }
 
 body {
-    /* background-color: #190e22; */
     background-image: linear-gradient(90deg, #1f122b, #0e0812);
-    background-repeat: no-repeat;
     height: 100vh;
+    width: 100vw;
 }
 
 .container-title {
@@ -26,8 +27,10 @@ body {
     padding: 30px;
     /* background-color: #D91A3F; */
     align-items: center;
+    justify-content: center;
     gap: 5px;
-    position: absolute;
+    position: fixed;
+    width: 100%;
 }
 
 h1 {
@@ -47,6 +50,10 @@ h1 {
 
     /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
     color: black;
+}
+.icon-tabler-alarm {
+    min-width: 25px;
+    min-height: 25px;
 }
 .display {
     display: flex;
@@ -122,3 +129,35 @@ h1 {
     /* box-shadow: 0 0 30px rgba(242, 29, 68, 0.4); */
 }
 
+/* @media (max-width: 400px) {
+    h1 {
+        font-size: 25px;
+    }
+    .container-title {
+        padding: 10px;
+    }
+} */
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 20px;
+    }
+    .icon-tabler-alarm {
+        width: 25px;
+        height: 25px;
+    }
+    .container-title {
+        padding: 10px;
+    }
+    .display {
+        /* padding-top: 70px; */
+        gap: 50px;
+    }
+    .temporizador {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .tempo {
+        font-size: 80px;
+    }
+}

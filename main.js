@@ -14,8 +14,13 @@ var dataAuxiliar = 0; // Utilizado quando o tempo é pausado
 var contando = 0; //0: o cronômetro está zerado, 1: o cronômetro foi ativado
 var cronometroPausado = 1; //0: o cronômetro está no estado "habilitado", 1: o cronômetro está no estado "desabilitado"
 
-botaoAcionar.addEventListener("click", acionar);
-botaoReiniciar.addEventListener("click", reiniciarContagem);
+
+
+// const getTempo = () => localStorage.getItem("tempo@cronometroonline") || 0;
+// const setTempo = (tempo) => localStorage.setItem("tempo@cronometroonline", tempo);
+
+// console.log(getTempo());
+// localStorage.setItem("tempo@cronometroonline", Date.now());
 
 function contagem() {
     contMinutos = Math.floor((Date.now() - dataInicial)/60000);
@@ -28,6 +33,7 @@ function contagem() {
 }
 
 function acionar() {
+
     if (cronometroPausado==1) {
         botaoAcionar.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause" width="50" height="50" viewBox="0 0 24 24" stroke-width="0.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -87,5 +93,4 @@ window.addEventListener("keypress", (evento) => {
 window.addEventListener("keypress", (evento) => {
     if (evento.key == "r") reiniciarContagem();
 });
-
 
